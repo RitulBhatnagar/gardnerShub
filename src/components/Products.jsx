@@ -1,10 +1,9 @@
 
-import { popularProducts } from "../data";
 import Product from "./Product";
 import {Box, Typography} from "@mui/material"
 
 
-const Products = () => {
+const Products = (props) => {
   return (
   <>
     <Typography variant="h3" textAlign="center"
@@ -20,7 +19,7 @@ const Products = () => {
     rowGap="20px"
     columnGap="1.33%"
   >
-      {popularProducts.map((item) => (
+      {props.data.map((item) => (
         <Product item={item} key={item.id} />
       ))}
     </Box>

@@ -1,9 +1,11 @@
 
 import { Box, Typography } from "@mui/material";
-
+import  OrderButton from './OrderButton';
+import whatsappicon  from "../resources/whatsappicon.png"
 
 
 const Product = ({ item }) => { 
+
   return (
     <Box width = "90%">
       <Box
@@ -13,15 +15,17 @@ const Product = ({ item }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src = {item.img}
+          src = {item.imageUrl}
           style = {{cursor : "pointer"}}
         />
+
+        <OrderButton text = "Order now" icon={whatsappicon}  />
 
       </Box>
 
       <Box mt="3px">
-        <Typography color = "#292929">SunFlower</Typography>
-        <Typography fontWeight="bold">Rs.200</Typography>
+        <Typography color = "#292929">{item.name}</Typography>
+        <Typography fontWeight="bold">₹{item.price}</Typography>
       </Box>
     </Box>
   );

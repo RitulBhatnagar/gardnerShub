@@ -4,17 +4,12 @@ import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import Slider from "../components/Slider";
 
-const Home = () => {
+function Home(props) {
   return (
     <div className = "home">
-      <Navbar />
-      <Slider />
- 
-      <Products/>
-      
-      <Footer/>
+      <Products data = {props.data}/>
     </div>
   );
-};
+}
 
 export default Home;
