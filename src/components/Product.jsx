@@ -16,7 +16,7 @@ const Product = ({ item }) => {
           width="300px"
           height="400px"
           src = {item.imageUrl}
-          style = {{cursor : "pointer"}}
+          style={{ borderRadius: '12px' }}
         />
 
         <OrderButton text = "Order now" icon={whatsappicon}  />
